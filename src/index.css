@@ -11,3 +11,97 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.element-animation{
+  width: 20px;
+  height: 30px;
+  background: white;
+  display: inline-block;
+  will-change: transform, top, left;
+  position: relative;
+  animation: animationFrames ease-in;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  transition-property: transform;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  -webkit-animation: animationFrames ease-in;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 50%;
+  -moz-animation: animationFrames ease-in;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 50%;
+  -o-animation: animationFrames ease-in;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 50%;
+  -ms-animation: animationFrames ease-in 4s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 50%;
+  
+}
+
+.element-animation:before {
+  content: "";
+  position:absolute;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  width: 80px;
+  height: 80px;
+}
+
+
+.element-animation:hover {
+  background-color: black !important;
+  position: relative;
+  color:#fff;
+  background-color:#333333;
+  left: 20px;
+}
+
+
+@keyframes animationFrames{
+  0% {
+    transform:  translateY(0) rotateZ(0deg);
+  }
+  100% {
+    transform:  translateY(100vh) rotateZ(360deg);
+  }
+}
+
+@-moz-keyframes animationFrames{
+  0% {
+    transform:  translateY(0) rotateZ(0deg);
+  }
+  100% {
+    transform:  translateY(100vh) rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes animationFrames {
+  0% {
+    transform:  translateY(0) rotateZ(0deg);
+  }
+  100% {
+    transform:  translateY(100vh) rotateZ(360deg);
+  }
+}
+
+@-o-keyframes animationFrames {
+  0% {
+    transform:  translateY(0) rotateZ(0deg);
+  }
+  100% {
+    transform:  translateY(100vh) rotateZ(360deg);
+  }
+}
+
+@-ms-keyframes animationFrames {
+  0% {
+    transform:  translateY(0) rotateZ(0deg);
+  }
+  100% {
+    transform:  translateY(100vh) rotateZ(360deg);
+  }
+}
